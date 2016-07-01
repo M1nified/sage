@@ -3,6 +3,11 @@ $color-hover : darken($brand-primary,5);
   background-color: $brand-primary;
 }
 .nav-top-bar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-top-bar-right{
+    margin-left:auto;
 }
 
 .menu-bar {

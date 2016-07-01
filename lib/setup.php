@@ -55,6 +55,7 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
  * Register sidebars
  */
 function widgets_init() {
+
   register_sidebar([
     'name'          => __('Primary', 'sage'),
     'id'            => 'sidebar-primary',
@@ -67,6 +68,15 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Footer', 'sage'),
     'id'            => 'sidebar-footer',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => __('Top Navigation Right', 'sage'),
+    'id'            => 'nav-top-bar-right',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',

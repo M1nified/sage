@@ -3,7 +3,8 @@
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
   </div>
   <div class="nav-top-bar-container">
-    <nav class="nav-top-bar container">
+    <div class="nav-top-bar container">
+    <nav>
       <?php
       if(has_nav_menu('top_navigation')) :
         wp_nav_menu([
@@ -13,6 +14,10 @@
       endif;
       ?>
     </nav>
+    <div class="nav-top-bar-right">
+      <?php dynamic_sidebar('nav-top-bar-right'); ?>
+    </div>
+    </div>
   </div>
   <div class="container">
     <nav class="nav-primary">
