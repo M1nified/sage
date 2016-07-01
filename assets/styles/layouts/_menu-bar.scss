@@ -1,7 +1,8 @@
-$bgcolor : #0084c5;
-$color-hover : lighten($bgcolor,8);
-.bluebar {
-  background-color: $bgcolor;
+$color-hover : darken($brand-primary,5);
+.nav-top-bar-container{
+  background-color: $brand-primary;
+}
+.nav-top-bar {
 }
 
 .menu-bar {
@@ -9,25 +10,39 @@ $color-hover : lighten($bgcolor,8);
   display: flex;
   align-items: baseline;
   justify-content: flex-start;
-  color:#ffffff;
+  a[href="#"]{
+      cursor:initial;
+  }
+  a{
+      display: block;
+  }
   &,
   & ul {
     list-style: none;
     padding-left:0;
+    margin-bottom:0;
   }
   >li {
-    cursor:pointer;
-    &.menu-block {
+    // cursor:pointer;
+    &,&>a{
+        color:#ffffff;
+        font-size:1.1em;
+        &,&:hover{
+            text-decoration: none;
+        }
+    }
+    &.menu-item-has-children {
       display: block;
-      padding:1rem;
+      &>a{
+          padding:1rem;
+      }
       font-weight:bold;
-      &>ul,
-      ol {
+      &>.sub-menu{
         cursor:auto;
         font-weight:normal;
-        margin-top:1rem;
-        margin-left:-1rem;
-        padding:1rem;
+        // margin-top:1rem;
+        // margin-left:-1rem;
+        padding:1.3rem;
         display:none;
         // display:flex;
         flex-direction: row;
@@ -35,8 +50,15 @@ $color-hover : lighten($bgcolor,8);
         position: absolute;
         background-color: $color-hover;
         overflow:hidden;
-        >.menu-block-group{
-          font-weight:bold;
+        z-index:100;
+        >li{
+            &,&>a{
+                color:#ffffff;
+                font-weight:bold;
+            }
+            &>a{
+                text-decoration: underline;
+            }
           margin:1rem;
           >ul{
             font-weight:normal;
