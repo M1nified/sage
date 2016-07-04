@@ -1,10 +1,10 @@
-$color-hover : darken($brand-primary,5);
 .nav-top-bar-container{
   background-color: $brand-primary;
 }
 .nav-top-bar {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .nav-top-bar-right{
     margin-left:auto;
@@ -53,7 +53,7 @@ $color-hover : darken($brand-primary,5);
         flex-direction: row;
         flex-wrap:wrap;
         position: absolute;
-        background-color: $color-hover;
+        background-color: $brand-hover;
         overflow:hidden;
         z-index:100;
         >li{
@@ -80,7 +80,7 @@ $color-hover : darken($brand-primary,5);
         }
       }
       &:hover {
-        background-color: $color-hover;
+        background-color: $brand-hover;
         >ul,
         ol {
           display: flex;

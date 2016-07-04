@@ -13,3 +13,33 @@
   @extend .btn;
   @extend .btn-default;
 }
+
+.nav-top-bar-container{
+  // Search form
+  .search-form {
+    @extend .form-inline;
+    font-size:0;
+  }
+  .search-form label {
+    font-weight: normal;
+    @extend .form-group;
+  }
+  .search-form .search-field {
+    @extend .form-control;
+    height: 28px;
+    border-radius: 20px 2px 2px 20px;
+    width:90px;
+    transition: ease-in-out, width .35s ease-in-out;
+    &:focus{
+      width: 230px;
+    }
+  }
+  .search-form .search-submit {
+    @extend .btn;
+    @extend .btn-default;
+    height:28px;
+    border-radius: 2px 20px 20px 2px;
+    padding:0 12px 0px 10px;
+    border-left:0px;
+  }
+}
