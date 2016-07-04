@@ -19,10 +19,14 @@
   .search-form {
     @extend .form-inline;
     font-size:0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   .search-form label {
     font-weight: normal;
     @extend .form-group;
+    margin:0;
   }
   .search-form .search-field {
     @extend .form-control;
