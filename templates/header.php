@@ -1,6 +1,7 @@
 <header class="banner">
-  <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+  <div class="container header-logos">
+    <?php /*<a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a> */ ?>
+    <?php dynamic_sidebar('header-logos'); ?>
   </div>
   <div class="nav-top-bar-container">
     <div class="nav-top-bar container">

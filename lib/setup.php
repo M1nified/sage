@@ -58,6 +58,17 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 function widgets_init() {
 
   register_sidebar([
+    'name'          => __('Header Logos', 'sage'),
+    'id'            => 'header-logos',
+    // 'before_widget' => '<section class="widget %1$s %2$s">',
+    // 'after_widget'  => '</section>',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '<span style="display:none;" class="nevershow">',
+    'after_title'   => '</span>'
+  ]);
+
+  register_sidebar([
     'name'          => __('Primary', 'sage'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s">',

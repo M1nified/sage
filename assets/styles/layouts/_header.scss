@@ -1,0 +1,12 @@
+.header-logos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    >:first-child,>.nevershow:first-child+*{
+        margin-right:auto;
+    }
+    >:last-child{
+        margin-left:auto;
+    }
+}
