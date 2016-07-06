@@ -27,15 +27,17 @@
     font-weight: normal;
     @extend .form-group;
     margin:0;
+    flex-grow: 2;
   }
   .search-form .search-field {
     @extend .form-control;
     height: 28px;
     border-radius: 2px 0 0 2px;
-    width:90px;
+    // width:90px;
+    width:100%;
     transition: ease-in-out, width .35s ease-in-out;
     &:focus{
-      width: 230px;
+      // width: 230px;
       border-color: #ccc;
     }
   }

@@ -7,6 +7,9 @@
         justify-content: space-between;
         flex-wrap: wrap;
         padding:1rem 0;
+        a[href="#"]{
+            pointer-events: none;
+        }
         ul,ol{
             list-style: none;
             padding-left:0;
@@ -21,6 +24,11 @@
                     text-decoration: none;
                     font-weight: bold;
                 }
+                &:hover{
+                    &,>a{
+                        color:#ffffff;
+                    }
+                }
                 >ul,>ol{
                     display: initial;
                     li{
@@ -31,11 +39,9 @@
                                 color: #ffffff;
                             }
                         }
-                    }
-                }
-                &:hover{
-                    &,>a{
-                        color:#ffffff;
+                        >a{
+                            display: block;
+                        }
                     }
                 }
             }
