@@ -4,7 +4,7 @@
         <input type="search" class="search-field"
             placeholder="<?php echo str_replace(':','',esc_attr_x( 'Search for:', 'label' )); ?>"
             value="<?php echo get_search_query() ?>" name="s"
-            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+            <?php /*title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" */ ?> />
     </label>
     <button type="submit" class="search-submit">
         <span class="glyphicon glyphicon-search"></span>

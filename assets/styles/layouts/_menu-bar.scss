@@ -1,10 +1,14 @@
 .nav-top-bar-container{
   background-color: $brand-primary;
+  box-shadow: 0 9px 17px -10px #7d7d7d;
 }
 .nav-top-bar {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    >nav{
+        flex-grow: 2;
+    }
 }
 .nav-top-bar-right{
     margin-left:auto;
@@ -14,7 +18,8 @@
   font-family:Calibri;
   display: flex;
   align-items: baseline;
-  justify-content: flex-start;
+  justify-content: space-around;
+  align-content: space-around;
   a[href="#"]{
       cursor:initial;
   }
@@ -36,12 +41,13 @@
             text-decoration: none;
         }
     }
+    display: block;
+    font-weight:bold;
+    &>a{
+        padding:1rem;
+        text-align: center;
+    }
     &.menu-item-has-children {
-      display: block;
-      &>a{
-          padding:1rem;
-      }
-      font-weight:bold;
       &>.sub-menu{
         cursor:auto;
         font-weight:normal;

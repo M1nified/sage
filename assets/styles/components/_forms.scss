@@ -31,19 +31,20 @@
   .search-form .search-field {
     @extend .form-control;
     height: 28px;
-    border-radius: 20px 2px 2px 20px;
+    border-radius: 2px 0 0 2px;
     width:90px;
     transition: ease-in-out, width .35s ease-in-out;
     &:focus{
       width: 230px;
+      border-color: #ccc;
     }
   }
   .search-form .search-submit {
     @extend .btn;
     @extend .btn-default;
     height:28px;
-    border-radius: 2px 20px 20px 2px;
-    padding:0 12px 0px 10px;
+    border-radius: 0 2px 2px 0;
+    padding:0 10px 0px 10px;
     border-left:0px;
   }
 }
