@@ -69,6 +69,15 @@ function widgets_init() {
   ]);
 
   register_sidebar([
+    'name'          => __('Left', 'sage'),
+    'id'            => 'sidebar-left',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
     'name'          => __('Primary', 'sage'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
@@ -130,6 +139,16 @@ function display_sidebar() {
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
+}
+
+function display_sidebar_left(){
+  static $display;
+  isset($display) || $display = !in_array(true,[
+    is_404(),
+    is_page_template('template-custom.php'),
+  ]);
+
+  return apply_filters('sage/display_sidebar_left',$display);
 }
 
 /**

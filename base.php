@@ -20,6 +20,11 @@ use Roots\Sage\Wrapper;
     ?>
     <div class="wrap container" role="document">
       <div class="content row">
+        <?php if (Setup\display_sidebar_left()) : ?>
+          <aside class="sidebar sidebar-left">
+            <?php include Wrapper\sidebar_left_path(); ?>
+          </aside>
+        <?php endif; ?>
         <main class="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->

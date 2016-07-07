@@ -17,6 +17,10 @@ function sidebar_path() {
   return new SageWrapping('templates/sidebar.php');
 }
 
+function sidebar_left_path(){
+  return new SageWrapping('templates/sidebar-left.php');
+}
+
 class SageWrapping {
   // Stores the full path to the main template file
   public static $main_template;
