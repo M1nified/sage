@@ -21,7 +21,7 @@ use Roots\Sage\Wrapper;
     <div class="wrap container" role="document">
       <div class="content row">
         <?php if (Setup\display_sidebar_left()) : ?>
-          <aside class="sidebar sidebar-left">
+          <aside class="sidebar-left">
             <?php include Wrapper\sidebar_left_path(); ?>
           </aside>
         <?php endif; ?>
@@ -29,7 +29,7 @@ use Roots\Sage\Wrapper;
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
-          <aside class="sidebar">
+          <aside class="sidebar-right">
             <?php include Wrapper\sidebar_path(); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>
