@@ -19,6 +19,13 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div class="wrap container" role="document">
+      <div class="content">
+        <?php if (Setup\display_sidebar_top()) : ?>
+          <aside class="sidebar-top">
+          <?php include Wrapper\sidebar_top_path(); ?>
+          </aside>
+        <?php endif; ?>
+      </div>
       <div class="content row">
         <?php if (Setup\display_sidebar_left()) : ?>
           <aside class="sidebar-left">
