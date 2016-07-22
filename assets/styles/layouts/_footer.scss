@@ -10,6 +10,11 @@
         a[href="#"]{
             pointer-events: none;
         }
+        >ul,>ol,.widget>ul,.widget>ol{
+            >li{
+                flex-grow: 1;
+            }
+        }
         ul,ol{
             list-style: none;
             padding-left:0;
