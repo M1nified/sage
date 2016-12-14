@@ -19,3 +19,14 @@ function customize_preview_js() {
   wp_enqueue_script('sage/customizer', Assets\asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
 }
 add_action('customize_preview_init', __NAMESPACE__ . '\\customize_preview_js');
+
+/**
+ * Filter the except length to all words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return true; // PHP_INT_MAX
+}
+add_filter( 'excerpt_length', __NAMESPACE__ . '\\wpdocs_custom_excerpt_length', 999 );
