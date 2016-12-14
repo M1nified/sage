@@ -6,7 +6,6 @@
     the_title();
     ?>
   </header>
-  <div class="entry-summary">
-    <?php the_excerpt(); ?>
-  </div>
+  <div class="featured-image"><?php the_post_thumbnail(); ?></div>
+  <div class="entry-summary"><?php the_excerpt(); ?></div>
 </article>
