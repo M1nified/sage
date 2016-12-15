@@ -7,3 +7,4 @@
     <?php the_excerpt(); ?>
   </div>
 </article>
+<div class="clearfix"></div>
