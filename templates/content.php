@@ -7,6 +7,12 @@
     ?>
   </header>
   <div class="featured-image"><?php the_post_thumbnail(); ?></div>
-  <div class="entry-summary"><?php the_excerpt(); ?></div>
+  <div class="entry-summary"><?php 
+  if(has_excerpt()) {
+    the_excerpt();
+  }else{
+    the_content();
+  }
+  ?></div>
 </article>
 <div class="clearfix article-separator"></div>
