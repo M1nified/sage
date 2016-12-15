@@ -22,3 +22,12 @@ function title() {
     return get_the_title();
   }
 }
+
+function sage_archive_title( $title ) {
+    if(is_archive()){
+      return sprintf( __( '%s' ), single_cat_title( '', false ) );
+    }
+    return get_the_archive_title();
+}
+ 
+add_filter( 'get_the_archive_title', 'Roots\Sage\Titles\sage_archive_title' );
