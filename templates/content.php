@@ -9,4 +9,4 @@
   <div class="featured-image"><?php the_post_thumbnail(); ?></div>
   <div class="entry-summary"><?php the_excerpt(); ?></div>
 </article>
-<div class="clearfix"></div>
+<div class="clearfix article-separator"></div>
