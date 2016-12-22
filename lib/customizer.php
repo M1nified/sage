@@ -41,4 +41,4 @@ function jetpackme_remove_rp() {
         remove_filter( 'the_content', $callback, 40 );
     }
 }
-add_filter( 'wp', 'jetpackme_remove_rp', 20 );
+add_filter( 'wp', __NAMESPACE__.'\\jetpackme_remove_rp', 20 );
