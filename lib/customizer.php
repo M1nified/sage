@@ -35,10 +35,14 @@ add_filter( 'excerpt_length', __NAMESPACE__ . '\\wpdocs_custom_excerpt_length', 
  * Remove related posts from the end of each post
  */
 function jetpackme_remove_rp() {
+  try{
     if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
         $jprp = \Jetpack_RelatedPosts::init();
         $callback = array( $jprp, 'filter_add_target_to_dom' );
         remove_filter( 'the_content', $callback, 40 );
     }
+  }catch(Exception $e){
+    \WriteLog\write_log($e->getMessage());
+  }
 }
 add_filter( 'wp', __NAMESPACE__.'\\jetpackme_remove_rp', 20 );
