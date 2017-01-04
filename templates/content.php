@@ -14,5 +14,6 @@
     the_content();
   }
   ?></div>
+  <footer><?php the_tags('<p class="tags">'.__('Tags: ')," ","</p>"); ?></footer>
 </article>
 <div class="clearfix article-separator"></div>

@@ -8,3 +8,17 @@
 .article-separator:not(:last-child){
     border-bottom: solid 1px #b7b7b7;
 }
+.tags{
+    >a[rel=tag]{
+        padding: 0.1em 0.7em;
+        display: inline-block;
+        background: #E4E4E4;
+        border-radius: 100px;
+        text-decoration: none;
+        &:hover{
+            text-decoration: none;
+            background: #555;
+            color: #fff;
+        }
+    }
+}
