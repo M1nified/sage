@@ -1,11 +1,23 @@
 // Grid system
+.juice{
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column-reverse;
+  @media(min-width: $screen-sm){
+    flex-direction: row;
+  }
+}
 .row{
   display: flex;
 }
 
 .sidebar-left{
-  width:250px; //to bedzie trzeba zmienic zeby byla lepsza responsywnosc
+  // width:250px; //to bedzie trzeba zmienic zeby byla lepsza responsywnosc
+  @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
   flex-grow: 0;
+  @media(min-width: $screen-sm){
+    max-width: 250px;
+  }
 }
 .sidebar-right{
   width:auto;

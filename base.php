@@ -19,14 +19,14 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div class="wrap container" role="document">
-      <div class="content">
+      <div class="content hidden">
         <?php if (Setup\display_sidebar_top()) : ?>
           <aside class="sidebar-top">
           <?php include Wrapper\sidebar_top_path(); ?>
           </aside>
         <?php endif; ?>
       </div>
-      <div class="content row">
+      <div class="content row juice">
         <?php if (Setup\display_sidebar_left()) : ?>
           <aside class="sidebar-left">
             <?php include Wrapper\sidebar_left_path(); ?>
