@@ -14,12 +14,14 @@ use Roots\Sage\Wrapper;
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
       </div>
     <![endif]-->
+    <div class="hidden-print">
     <?php
       do_action('get_header');
       get_template_part('templates/header');
     ?>
+    </div>
     <div class="wrap container" role="document">
-      <div class="content hidden">
+      <div class="content hidden-print hidden-xs hidden-sm">
         <?php if (Setup\display_sidebar_top()) : ?>
           <aside class="sidebar-top">
           <?php include Wrapper\sidebar_top_path(); ?>
@@ -28,7 +30,7 @@ use Roots\Sage\Wrapper;
       </div>
       <div class="content row juice">
         <?php if (Setup\display_sidebar_left()) : ?>
-          <aside class="sidebar-left">
+          <aside class="sidebar-left hidden-print">
             <?php include Wrapper\sidebar_left_path(); ?>
           </aside>
         <?php endif; ?>
@@ -42,10 +44,12 @@ use Roots\Sage\Wrapper;
         <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
+    <div class="hidden-print">
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
       wp_footer();
     ?>
+    </div>
   </body>
 </html>
