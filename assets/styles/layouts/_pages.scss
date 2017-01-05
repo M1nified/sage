@@ -8,6 +8,15 @@
 .article-separator:not(:last-child){
     border-bottom: solid 1px #b7b7b7;
 }
+.article-footer{
+    padding-top: 0.5em;
+}
+footer .icon-tag{
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    color:#FF5722;
+}
 .tags{
     >a[rel=tag]{
         padding: 0.1em 0.7em;
@@ -15,9 +24,11 @@
         background: #E4E4E4;
         border-radius: 100px;
         text-decoration: none;
+        margin-top: 0.5em;
         &:hover{
             text-decoration: none;
-            background: #555;
+            background: #0084c5;
+            // background: #555;
             color: #fff;
         }
     }
