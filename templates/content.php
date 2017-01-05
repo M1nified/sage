@@ -15,6 +15,6 @@
   }
   ?></div>
   <div class="clearfix"></div>
-  <footer><?php the_tags('<p class="tags"><span class="glyphicon glyphicon-tags icon-tag">&nbsp;</span>'," ","</p>"); ?></footer>
+  <footer class="ss-pad-top-1"><?php the_tags('<p class="tags"><span class="glyphicon glyphicon-tags icon-tag">&nbsp;</span>'," ","</p>"); ?></footer>
 </article>
 <div class="clearfix article-separator"></div>
