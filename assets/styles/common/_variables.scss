@@ -7,4 +7,7 @@ $sidebar-sm-columns:    4;
 
 // Colors
 $brand-primary:         #0084c5;
-$brand-hover: darken($brand-primary,5);
+$brand-hover:           darken($brand-primary,5);
+
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:     15px;
