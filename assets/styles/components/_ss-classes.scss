@@ -1,0 +1,17 @@
+.ss-btn-to-right{
+    clear: both;
+    text-align: right;
+}
+.ss-btn-blog-goto{
+    font-size: 20px;
+    border: solid 1px #0070a7;
+    background-color: #0084c5;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.3em 0.7em;
+    box-shadow: 1px 1px 3px 0px #5f5f5f;
+    &:hover{
+        background-color: #2990c3;
+        box-shadow: 1px 1px 2px 0px #5f5f5f;
+    }
+}
