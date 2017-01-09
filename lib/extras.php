@@ -31,3 +31,23 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+/**
+ * Hide post title
+ */
+include_once 'meta-title.php';
+function setup_boxes(){
+    add_action('add_meta_boxes',__NAMESPACE__.'\add_meta_boxes');
+}
+add_action('load-post.php',__NAMESPACE__.'\setup_boxes');
+add_action('load-post-new.php',__NAMESPACE__.'\setup_boxes');
+function add_meta_boxes(){
+    add_meta_box(
+        'sage-meta-title',
+        esc_html__('Hide title','Hides the title'),
+        __NAMESPACE__.'\meta_title_callback',
+        ['post','page'],
+        'side',
+        'default'
+    );
+}
