@@ -33,7 +33,7 @@ function excerpt_more() {
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 /**
- * Hide post title
+ * Hide post elements
  */
 include_once 'meta-title.php';
 function setup_boxes(){
@@ -44,7 +44,7 @@ add_action('load-post-new.php',__NAMESPACE__.'\setup_boxes');
 function add_meta_boxes(){
     add_meta_box(
         'sage-meta-title',
-        esc_html__('Hide title','Hides the title'),
+        esc_html__('Display settings (Sage extras)','Display settings (Sage extras)'),
         __NAMESPACE__.'\meta_title_callback',
         ['post','page'],
         'side',
