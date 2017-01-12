@@ -20,6 +20,13 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     </div>
+    <div class="">
+      <?php if (Setup\display_sidebar_wide_top()) : ?>
+        <aside class="sidebar-wide-top">
+          <?php include Wrapper\sidebar_wide_top_path(); ?>
+        </aside>
+      <?php endif; ?>
+    </div>
     <div class="wrap container" role="document">
       <div class="content hidden-print hidden-xs hidden-sm">
         <?php if (Setup\display_sidebar_top()) : ?>

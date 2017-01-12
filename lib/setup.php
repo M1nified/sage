@@ -69,6 +69,15 @@ function widgets_init() {
   ]);
 
   register_sidebar([
+    'name'          => __('Top - Wide', 'sage'),
+    'id'            => 'sidebar-wide-top',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
     'name'          => __('Top (Under Menu)', 'sage'),
     'id'            => 'sidebar-top',
     'before_widget' => '<div class="widget %1$s %2$s">',
@@ -158,6 +167,16 @@ function display_sidebar_left(){
   ]);
 
   return apply_filters('sage/display_sidebar_left',$display);
+}
+
+function display_sidebar_wide_top(){
+  static $display;
+  isset($display) || $display = !in_array(true,[
+    is_404(),
+
+  ]);
+
+  return apply_filters('sage/display_sidebar_wide_top',$display);
 }
 
 function display_sidebar_top(){
