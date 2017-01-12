@@ -1,3 +1,4 @@
+// @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_variables.scss";
 @import "common/variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
@@ -6,6 +7,7 @@
 // endbower
 
 @import "common/global";
+@import "common/type";
 @import "components/addons";
 @import "components/buttons";
 @import "components/comments";

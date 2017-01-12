@@ -22,3 +22,12 @@ $statistica-secondary-2:        #71c6c1;
 $statistica-secondary-3:        #f2af00;
 $statistica-secondary-4:        #f27d00;
 $statistica-secondary-5:        #6e2585;
+
+// Font
+$font-size-base:          14px !default;
+$font-size-h1:            floor(($font-size-base * 2.4)); // ~36px
+$font-size-h2:            floor(($font-size-base * 2.0)); // ~30px
+// $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+// $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-h5:            $font-size-base !default;
+// $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
