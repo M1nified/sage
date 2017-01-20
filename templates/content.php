@@ -12,12 +12,27 @@
   </header>
   <div class="featured-image"><?php the_post_thumbnail(); ?></div>
   <div class="entry-summary"><?php 
-  if(has_excerpt()) {
-    the_excerpt();
-  }else{
-    the_content();
-  }
-  ?></div>
+    if(has_excerpt()) {
+      the_excerpt();
+    }else{
+      the_content();
+    }
+    if($stored_meta['_sage-postmeta-metabox-readmore-state'][0] == 1){
+      ?>
+      <div class="clearfix"></div>
+      <p class="ss-btn-to-right"><?php
+        if($stored_meta['_sage-postmeta-metabox-readmore-link'][0]){
+          $url = $stored_meta['_sage-postmeta-metabox-readmore-link'][0];
+        }else{
+          $url = get_the_permalink( );
+        }
+        echo "<a class=\"ss-btn-blog-goto\" href=\"{$url}\">{$stored_meta['_sage-postmeta-metabox-readmore-text'][0]}</a>"
+        ?></p>
+      <?php
+    }
+
+    ?>
+  </div>
   <div class="clearfix"></div>
   <footer class="article-footer"><?php
   if(!isset($stored_meta['sage-meta-tags-hide']) || $stored_meta['sage-meta-tags-hide'][0] != 1){

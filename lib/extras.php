@@ -51,3 +51,7 @@ function add_meta_boxes(){
         'default'
     );
 }
+/**
+ * Load custom
+ */
+include __DIR__.'/../custom/button-readmore.php';
