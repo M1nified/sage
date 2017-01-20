@@ -35,9 +35,7 @@
         ?></p>
       <?php
     }
-
-    ?>
-  </div>
+  ?></div>
   <div class="clearfix"></div>
   <footer class="article-footer"><?php
   if(!isset($stored_meta['sage-meta-tags-hide']) || $stored_meta['sage-meta-tags-hide'][0] != 1){
