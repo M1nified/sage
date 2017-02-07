@@ -1,8 +1,11 @@
-<?php namespace Roots\Sage\Custom\PostMeta;
+<?php namespace Roots\Sage\Custom\BtnReadmore;
 
 add_action('save_post',__NAMESPACE__.'\metabox_save');
 add_action('load-post.php',__NAMESPACE__.'\setup_boxes');
 add_action('load-post-new.php',__NAMESPACE__.'\setup_boxes');
+add_action('admin_init', __NAMESPACE__.'\add_settings'); 
+
+// Definitions
 
 function setup_boxes(){
     add_action('add_meta_boxes',__NAMESPACE__.'\add_meta_boxes');
@@ -62,3 +65,68 @@ function add_meta_boxes(){
         update_post_meta( $post_id, '_sage-postmeta-metabox-readmore-link', 0 );
     }
  }
+
+ 
+// Display
+
+function display_button($stored_meta=null){
+    if($button_html = get_button($stored_meta)){
+        echo '<div class="clearfix"></div>';
+        echo get_button($stored_meta);
+    }
+}
+
+function get_button($stored_meta=null){
+    if($stored_meta==null){
+        if(!in_the_loop()){
+            return false;
+        }
+        $stored_meta = get_post_meta(get_the_ID());
+    }
+    if(isset($stored_meta['_sage-postmeta-metabox-readmore-state'][0]) && $stored_meta['_sage-postmeta-metabox-readmore-state'][0] == 1){
+        if(isset($stored_meta['_sage-postmeta-metabox-readmore-text'][0]) && $stored_meta['_sage-postmeta-metabox-readmore-text'][0]){
+            $goto_text = $stored_meta['_sage-postmeta-metabox-readmore-text'][0];
+        }else{
+            $goto_text = get_option( "sage_cstm_btn_readmore_default_text", "");
+        }
+        if(isset($stored_meta['_sage-postmeta-metabox-readmore-link'][0]) && $stored_meta['_sage-postmeta-metabox-readmore-link'][0]){
+            $url = $stored_meta['_sage-postmeta-metabox-readmore-link'][0];
+        }else{
+            $url = get_the_permalink( );
+        }
+        $button_html = "<p class=\"ss-btn-to-right\"><a class=\"ss-btn-blog-goto\" href=\"{$url}\">{$goto_text}</a></p>";
+        return $button_html;
+    }
+    return false;
+}
+
+// Settings
+
+function add_settings(){
+    add_settings_section(  
+        'sage_cstm_btn_readmore', // Section ID 
+        'Sage - Button Readmore', // Section Title
+        __NAMESPACE__.'\sage_cstm_btn_readmore_callback', // Callback
+        'reading' // What Page?  This makes the section show up on the General Settings Page
+    );
+    add_settings_field(
+        'sage_cstm_btn_readmore_default_text',
+        'Deafult text for the button',
+        __NAMESPACE__.'\sage_cstm_btn_readmore_default_text_callback',
+        'reading',
+        'sage_cstm_btn_readmore',
+        array(
+            'label_for' => 'sage_cstm_btn_readmore_default_text' 
+        )
+    );
+    register_setting('reading','sage_cstm_btn_readmore_default_text', 'esc_attr');
+}
+
+function sage_cstm_btn_readmore_callback(){
+    echo '<p></p>';
+}
+
+function sage_cstm_btn_readmore_default_text_callback(){
+    $default_text = get_option( "sage_cstm_btn_readmore_default_text", "");
+    echo "<input type=\"text\" name=\"sage_cstm_btn_readmore_default_text\" value=\"{$default_text}\"></input>";
+}

@@ -17,24 +17,7 @@
     }else{
       the_content();
     }
-    if(isset($stored_meta['_sage-postmeta-metabox-readmore-state'][0]) && $stored_meta['_sage-postmeta-metabox-readmore-state'][0] == 1){
-      if(isset($stored_meta['_sage-postmeta-metabox-readmore-text'][0])){
-        $goto_text = $stored_meta['_sage-postmeta-metabox-readmore-text'][0];
-      }else{
-        $goto_text = "";
-      }
-      ?>
-      <div class="clearfix"></div>
-      <p class="ss-btn-to-right"><?php
-        if(isset($stored_meta['_sage-postmeta-metabox-readmore-link'][0]) && $stored_meta['_sage-postmeta-metabox-readmore-link'][0]){
-          $url = $stored_meta['_sage-postmeta-metabox-readmore-link'][0];
-        }else{
-          $url = get_the_permalink( );
-        }
-        echo "<a class=\"ss-btn-blog-goto\" href=\"{$url}\">{$goto_text}</a>"
-        ?></p>
-      <?php
-    }
+    \Roots\Sage\Custom\BtnReadmore\display_button($stored_meta);
   ?></div>
   <div class="clearfix"></div>
   <footer class="article-footer"><?php
