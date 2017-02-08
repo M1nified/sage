@@ -31,7 +31,7 @@ function add_meta_boxes(){
     <h3>Read more</h3>
 
     <p><label><input type="checkbox" name="_sage-postmeta-metabox-readmore-state" <?php echo (isset($stored_meta['_sage-postmeta-metabox-readmore-state']) && $stored_meta['_sage-postmeta-metabox-readmore-state'][0] == 1) ? 'checked' : ''; ?>>Display read more button</label></p>
-    <p><label>Text: <input type="text" name="_sage-postmeta-metabox-readmore-text" value="<?php echo $stored_meta['_sage-postmeta-metabox-readmore-text'][0]; ?>"></label></p>
+    <p><label>Text: <input type="text" name="_sage-postmeta-metabox-readmore-text" value="<?php echo $stored_meta['_sage-postmeta-metabox-readmore-text'][0]; ?>" placeholder="<?php echo get_option( "sage_cstm_btn_readmore_default_text", ""); ?>"></label></p>
     <p><label>Url:  <input type="text" name="_sage-postmeta-metabox-readmore-link" value="<?php echo $stored_meta['_sage-postmeta-metabox-readmore-link'][0]; ?>"></label></p>
     
     <?php

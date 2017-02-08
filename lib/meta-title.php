@@ -9,9 +9,9 @@ function meta_title_callback($post,$box){
     $stored_meta = get_post_meta($post->ID);
     // print_r($stored_meta);
     ?>
-    <p><label><input type="checkbox" name="sage-meta-title-hide" id="sage-meta-title-hide" <?php echo (isset($stored_meta['sage-meta-title-hide']) && $stored_meta['sage-meta-title-hide'][0] == 1) ? 'checked' : ''; ?> > Hide title</label></p>
+    <p><label><input type="checkbox" name="_sage-meta-title-hide" id="_sage-meta-title-hide" <?php echo (isset($stored_meta['_sage-meta-title-hide']) && $stored_meta['_sage-meta-title-hide'][0] == 1) ? 'checked' : ''; ?> > Hide title</label></p>
     
-    <p><label><input type="checkbox" name="sage-meta-tags-hide" id="sage-meta-tags-hide" <?php echo (isset($stored_meta['sage-meta-tags-hide']) && $stored_meta['sage-meta-tags-hide'][0] == 1) ? 'checked' : ''; ?> > Hide tags</label></p>
+    <p><label><input type="checkbox" name="_sage-meta-tags-hide" id="_sage-meta-tags-hide" <?php echo (isset($stored_meta['_sage-meta-tags-hide']) && $stored_meta['_sage-meta-tags-hide'][0] == 1) ? 'checked' : ''; ?> > Hide tags</label></p>
     <?php
 }
 
@@ -28,14 +28,14 @@ function meta_title_save($post_id){
     }
 
     // Checks for input and sanitizes/saves if needed
-    if( isset( $_POST[ 'sage-meta-title-hide' ] )) {
-        update_post_meta( $post_id, 'sage-meta-title-hide', 1 );
+    if( isset( $_POST[ '_sage-meta-title-hide' ] )) {
+        update_post_meta( $post_id, '_sage-meta-title-hide', 1 );
     }else{
-        update_post_meta( $post_id, 'sage-meta-title-hide', 0 );
+        update_post_meta( $post_id, '_sage-meta-title-hide', 0 );
     }
-    if( isset( $_POST[ 'sage-meta-tags-hide' ] )) {
-        update_post_meta( $post_id, 'sage-meta-tags-hide', 1 );
+    if( isset( $_POST[ '_sage-meta-tags-hide' ] )) {
+        update_post_meta( $post_id, '_sage-meta-tags-hide', 1 );
     }else{
-        update_post_meta( $post_id, 'sage-meta-tags-hide', 0 );
+        update_post_meta( $post_id, '_sage-meta-tags-hide', 0 );
     }
 }
