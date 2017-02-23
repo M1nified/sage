@@ -89,8 +89,8 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Left', 'sage'),
     'id'            => 'sidebar-left',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ]);
