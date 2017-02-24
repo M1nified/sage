@@ -17,6 +17,10 @@ function sidebar_path() {
   return new SageWrapping('templates/sidebar.php');
 }
 
+function sidebar_left_first_path(){
+  return new SageWrapping('templates/sidebar-left-first.php');
+}
+
 function sidebar_left_path(){
   return new SageWrapping('templates/sidebar-left.php');
 }

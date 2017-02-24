@@ -36,10 +36,19 @@ use Roots\Sage\Wrapper;
         <?php endif; ?>
       </div>
       <div class="content row juice">
-        <?php if (Setup\display_sidebar_left()) : ?>
-          <aside class="sidebar-left hidden-print">
-            <?php include Wrapper\sidebar_left_path(); ?>
-          </aside>
+        <?php if (Setup\display_sidebar_left_first() || Setup\display_sidebar_left()): ?>
+        <aside class="sidebar-left">
+          <?php if (Setup\display_sidebar_left_first()) : ?>
+            <div class="sidebar-left-first hidden-print">
+              <?php include Wrapper\sidebar_left_first_path(); ?>
+            </div>
+          <?php endif; ?>
+          <?php if (Setup\display_sidebar_left()) : ?>
+            <div class="sidebar-left-second hidden-print">
+              <?php include Wrapper\sidebar_left_path(); ?>
+            </div>
+          <?php endif; ?>
+        </aside>
         <?php endif; ?>
         <main class="main">
           <?php include Wrapper\template_path(); ?>
