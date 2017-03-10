@@ -55,3 +55,4 @@ function add_meta_boxes(){
  * Load custom
  */
 include __DIR__.'/../custom/button-readmore.php';
+include __DIR__.'/../custom/shortcodes.php';
