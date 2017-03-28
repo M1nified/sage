@@ -33,6 +33,9 @@ window.addEventListener('load', () => {
                 titleElement.addEventListener('click', goBack);
             } else {
                 titleElement.classList.add('menu-root');
+                titleElement.addEventListener('click', event => {
+                    hideMenu();
+                })
             }
             titleElement.href = "#";
             titleElement.classList.add('menu-title');
