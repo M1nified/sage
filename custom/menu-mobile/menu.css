@@ -1,0 +1,39 @@
+.menu-dimmer{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.menu-dimmer.menu-show{
+    display: block;
+}
+
+.menu-container{
+    padding-top: 50px;
+    min-height: 100vh;
+    min-width: 70vw;
+    background-color: #383838;
+    z-index: 100;
+}
+
+.menu-container a {
+  display: block;
+  border: solid 1px #383838;
+  padding: 1em 0.6em;
+  background-color: #646464;
+  color: #fff !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.menu-container a.menu-node:hover {
+  background-color: #5a5a5a;
+}
+.menu-container a.menu-title {
+  background-color: #4e4e4e;
+  color: #b9b9b9;
+  padding-top: 2.5em;
+}
+.menu-container .menu-hide {
+  display: none;
+}

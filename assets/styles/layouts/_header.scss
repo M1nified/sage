@@ -10,3 +10,12 @@
         margin-left:auto;
     }
 }
+.btn-menu-show-1{
+    color: #23282d !important;
+    text-decoration: none;
+    font-size: 2em;
+    cursor: pointer;
+      @media (min-width: $screen-xs-min){
+        display: none;
+      }
+}

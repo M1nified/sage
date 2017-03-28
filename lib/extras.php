@@ -56,3 +56,4 @@ function add_meta_boxes(){
  */
 include __DIR__.'/../custom/button-readmore.php';
 include __DIR__.'/../custom/shortcodes.php';
+include __DIR__.'/../custom/menu-mobile/menu.php';

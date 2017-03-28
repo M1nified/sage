@@ -1,4 +1,5 @@
 <header class="banner">
+  <a href="#" role="button" class="menu-btn btn-menu-show-1" data-action="menu-show"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
   <div class="container header-logos">
     <?php /*<a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a> */ ?>
     
