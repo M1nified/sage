@@ -1,0 +1,11 @@
+.footer-wide{
+    nav{
+        ul,ol{
+            display: block;
+            li{
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+    }
+}
