@@ -58,3 +58,19 @@
         }
     }
 }
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+    .footer-wide{
+        nav{
+            ul, ol {
+                display: block !important; 
+            }
+            &>ul>li, &>ol>li {
+                display: inline-block;
+                vertical-align: top; 
+                width:24%;
+            }
+        }
+    }
+}

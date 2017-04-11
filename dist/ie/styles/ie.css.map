@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEQ,wCAAK;EACD,OAAO,EAAE,KAAK;EACd,8CAAE;IACE,OAAO,EAAE,YAAY;IACrB,cAAc,EAAE,GAAG",
-"sources": ["../../../assets/ie/styles/ie.scss"],
-"names": [],
-"file": "ie.css"
-}
