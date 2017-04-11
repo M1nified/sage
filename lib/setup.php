@@ -216,7 +216,7 @@ function assets() {
 
   // JJ specials
   // wp_enqueue_style( 'sage-theme-ie', get_stylesheet_directory_uri() . "/css/ie.css", array( 'sage-theme-ie' ) );
-  wp_enqueue_style( 'sage-theme-ie', Assets\asset_path('styles/ie.css'), array( 'sage-theme-ie' ) );
+  wp_enqueue_style( 'sage-theme-ie', Assets\asset_path('ie/styles/ie.css'), array( 'sage-theme-ie' ) );
 	wp_style_add_data( 'sage-theme-ie', 'conditional', 'IE' );
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
