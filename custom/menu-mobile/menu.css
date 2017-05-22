@@ -37,3 +37,12 @@
 .menu-container .menu-hide {
   display: none;
 }
+
+.menu-node > span {
+  float: right;
+}
+
+.menu-title > span {
+  float:left;
+  padding-right: 0.5em;
+}
