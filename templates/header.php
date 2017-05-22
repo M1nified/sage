@@ -1,5 +1,4 @@
 <header class="banner">
-  <a href="#" role="button" class="menu-btn btn-menu-show-1" data-action="menu-show"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
   <div class="container header-logos">
     <?php /*<a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a> */ ?>
     
@@ -7,6 +6,7 @@
   </div>
   <div class="nav-top-bar-container">
     <div class="nav-top-bar container">
+    <a href="#" role="button" class="menu-btn btn-menu-show-1" data-action="menu-show"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
     <nav>
       <?php
       if(has_nav_menu('top_navigation')) :

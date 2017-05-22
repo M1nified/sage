@@ -13,9 +13,10 @@
 .btn-menu-show-1{
     color: #23282d !important;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.7em;
+    padding: 0.4rem 0.5rem 0rem 0.5rem;
     cursor: pointer;
-      @media (min-width: $screen-xs-min){
+    @media (min-width: $screen-xs-min) and (min-height: $screen-xs-min){
         display: none;
-      }
+    }
 }
